@@ -1,0 +1,13 @@
+<% @todos.inspect %>
+
+<div class = "card" >
+<% @todos.each do |todo| %>
+<h1> <%= todo.description %> </h1>
+<p>  <%= todo.completed %> </p>
+   <%= link_to "show", todo %>
+   <%= link_to "edit", edit_path %>
+<% end %>
+
+</div>
+
+<%= link_to "Crear ToDo", todos_new_path %>
