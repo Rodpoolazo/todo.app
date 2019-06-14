@@ -3,9 +3,10 @@
 <div class = "card" >
 <% @todos.each do |todo| %>
 <h1> <%= todo.description %> </h1>
-<p>  <%= todo.completed %> </p>
-   <%= link_to "show", todo %>
-   <%= link_to "edit", edit_path %>
+  <p> <%= todo.completed %> </p>
+  <p> <%= link_to "show", todo %> </p>
+  <p> <%= link_to "edit", edit_path(todo) %> </p>
+  <p> <%= link_to "borrar", todo, method: :delete %></p>
 <% end %>
 
 </div>
